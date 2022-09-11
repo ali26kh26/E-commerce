@@ -1,4 +1,4 @@
-import Item from "./item";
+import Item from "./Item";
 import ItemsSmallScreen from "./itemsSmallScreen";
 
 function Items(): JSX.Element {
