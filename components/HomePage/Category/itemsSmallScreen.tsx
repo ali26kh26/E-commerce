@@ -3,7 +3,7 @@ import Item from "./Item";
 function ItemsSmallScreen() {
   return (
     <>
-      <div className="mt-4 flex justify-evenly sm:hidden">
+      <div className="mt-4 flex justify-between sm:hidden">
         <Item
           items={16}
           title={"Vegetable"}
@@ -15,7 +15,7 @@ function ItemsSmallScreen() {
           src={"/assets/items/fruits.webp"}
         />
       </div>
-      <div className="mt-4 flex justify-evenly sm:hidden">
+      <div className="mt-4 flex justify-between sm:hidden">
         <Item items={11} title={"Cow Milk"} src={"/assets/items/milk.webp"} />
         <Item
           items={16}
@@ -23,7 +23,7 @@ function ItemsSmallScreen() {
           src={"/assets/items/sea&fish.webp"}
         />
       </div>
-      <div className="mt-4 flex justify-evenly sm:hidden">
+      <div className="mt-4 flex justify-between sm:hidden">
         <Item items={16} title={"Fresh Meat"} src={"/assets/items/meat.webp"} />
         <Item
           items={16}
