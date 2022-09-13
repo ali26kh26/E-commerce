@@ -1,7 +1,15 @@
 
-function Score():JSX.Element {
+function Score({Star}: {Star: Function}):JSX.Element {
 
-  return <></>
+  return (
+    <div className="flex space-x-1">
+      {<Star width={24} className={' fill-gray-300'}/>}
+      {<Star width={24} className={' fill-gray-300'}/>}
+      {<Star width={24} className={' fill-gray-300'}/>}
+      {<Star width={24} className={' fill-gray-300'}/>}
+      {<Star width={24} className={' fill-gray-300'}/>}
+    </div>
+  )
 
 }
 

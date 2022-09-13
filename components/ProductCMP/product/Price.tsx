@@ -1,7 +1,7 @@
 
-function Price():JSX.Element {
+function Price({value}: {value: string}):JSX.Element {
 
-  return <></>
+  return <p className="text-3xl font-bold">${value}</p>
 
 }
 

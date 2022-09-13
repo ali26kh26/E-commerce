@@ -1,8 +1,8 @@
 
-function title() {
+function Title({title}: {title: string}) {
 
-  return
+  return <p className="text-2xl font-normal tracking-wide capitalize">{title}</p>
 
 }
 
-export default title;
+export default Title;
