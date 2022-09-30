@@ -1,0 +1,50 @@
+.container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  .outer {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ee6c4d;
+    animation: none;
+    z-index: 5;
+    > div {
+      position: absolute;
+      top: 5%;
+      left: 40%;
+      font-size: 2rem;
+      transform: scaleY(1.5) rotate(90deg);
+      text-align: center;
+      line-height: 70px;
+      color: white;
+    }
+  }
+  .inner {
+    animation: ping 2s ease-in-out infinite both;
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
