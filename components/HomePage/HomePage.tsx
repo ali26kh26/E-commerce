@@ -1,3 +1,4 @@
+import Banner from "./banner/Banner";
 import Container from "./Category/Container";
 import Superiority from "./Superiority/superiorityContainer";
 
@@ -9,6 +10,9 @@ const HomePage = () => {
       </div>
       <div className="w-full flex justify-center bg-stone-200">
         <Superiority />
+      </div>
+      <div>
+        <Banner />
       </div>
     </>
   );

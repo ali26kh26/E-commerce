@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .first {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.2rem;
+}
+
+.container .first > div {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 10%;
+}
+
+.container .first > div > p {
+  color: #ee6c4d;
+}
+
+.container .first > div > h1 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.container .first > div > h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.container .second {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.container .second > div {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.container .second > div h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.container .second > div h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=banner.module.css.map */
