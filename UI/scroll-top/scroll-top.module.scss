@@ -1,0 +1,30 @@
+.container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 65px;
+  right: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ee6c4d;
+  border: 2px solid #ee6c4d;
+  transition: all 0.5s;
+  z-index: 5;
+  font-size: 1.2rem;
+  svg {
+    transform: scaleX(1.2);
+  }
+  cursor: pointer;
+  &:hover {
+    background-color: #ee6c4d;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    bottom: 35px;
+  }
+}

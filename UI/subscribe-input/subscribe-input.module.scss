@@ -1,0 +1,19 @@
+.input {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    outline: none;
+    &::placeholder {
+      color: rgb(119, 119, 119);
+    }
+  }
+  div {
+    position: absolute;
+    top: 35%;
+    right: 3%;
+    font-weight: bolder;
+  }
+}

@@ -1,0 +1,34 @@
+.input {
+  position: relative;
+}
+
+.input input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input input::-webkit-input-placeholder {
+  color: #777777;
+}
+
+.input input:-ms-input-placeholder {
+  color: #777777;
+}
+
+.input input::-ms-input-placeholder {
+  color: #777777;
+}
+
+.input input::placeholder {
+  color: #777777;
+}
+
+.input div {
+  position: absolute;
+  top: 35%;
+  right: 3%;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=subscribe-input.module.css.map */

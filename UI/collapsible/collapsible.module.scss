@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: #ee6c4d;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
+  }
+
+  .content {
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+  }
+}

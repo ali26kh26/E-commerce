@@ -1,0 +1,78 @@
+.container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.container .outer {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ee6c4d;
+  -webkit-animation: none;
+          animation: none;
+  z-index: 5;
+}
+
+.container .outer > div {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  font-size: 2rem;
+  -webkit-transform: scaleY(1.5) rotate(90deg);
+          transform: scaleY(1.5) rotate(90deg);
+  text-align: center;
+  line-height: 70px;
+  color: white;
+}
+
+.container .inner {
+  -webkit-animation: ping 2s ease-in-out infinite both;
+          animation: ping 2s ease-in-out infinite both;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes ping {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=play-button.module.css.map */

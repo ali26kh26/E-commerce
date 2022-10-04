@@ -1,0 +1,41 @@
+.container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 65px;
+  right: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ee6c4d;
+  border: 2px solid #ee6c4d;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 5;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.container svg {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.container:hover {
+  background-color: #ee6c4d;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    bottom: 35px;
+  }
+}
+/*# sourceMappingURL=scroll-top.module.css.map */
