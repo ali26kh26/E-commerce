@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,QAAQ,EAAE,QAAQ;CAiBnB;;AAlBD,AAGE,MAHI,CAGJ,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,IAAI;CAId;;AAXH,AAQI,MARE,CAGJ,KAAK,AAKF,aAAa,CAAC;EACb,KAAK,EAAE,OAAkB;CAC1B;;AAVL,AAYE,MAZI,CAYJ,GAAG,CAAC;EACF,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,KAAK,EAAE,EAAE;EACT,WAAW,EAAE,MAAM;CACpB",
+    "sources": [
+        "../UI/subscribe-input/subscribe-input.module.scss"
+    ],
+    "names": [],
+    "file": "subscribe-input.module.css"
+}

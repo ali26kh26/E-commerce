@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+}
+
+.container .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.container .label:hover {
+  color: #ee6c4d;
+}
+
+.container .label .icon {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.container .content {
+  overflow: hidden;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+}
+/*# sourceMappingURL=collapsible.module.css.map */

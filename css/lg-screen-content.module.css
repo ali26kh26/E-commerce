@@ -1,0 +1,36 @@
+.content h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content ul {
+  color: #686868;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content ul li {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.content ul li:hover {
+  color: #ee6c4d;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .content {
+    display: none;
+  }
+}
+/*# sourceMappingURL=lg-screen-content.module.css.map */

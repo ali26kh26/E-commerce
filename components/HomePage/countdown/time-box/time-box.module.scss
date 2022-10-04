@@ -1,0 +1,16 @@
+.container {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #ee6c4d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}

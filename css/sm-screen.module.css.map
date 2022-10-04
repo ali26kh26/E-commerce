@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,QADM,CACN,EAAE,CAAC;EACD,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,OAAkB;EACzB,UAAU,EAAE,QAAQ;EACpB,MAAM,EAAE,OAAO;CAIhB;;AATH,AAMI,QANI,CACN,EAAE,AAKC,MAAM,CAAC;EACN,KAAK,EAAE,OAAO;CACf;;AAIL,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AAAA,UAAU,CAAC;IACT,OAAO,EAAE,IAAI;GACd",
+    "sources": [
+        "../components/Layout/footer/sm-screen-content/sm-screen.module.scss"
+    ],
+    "names": [],
+    "file": "sm-screen.module.css"
+}
