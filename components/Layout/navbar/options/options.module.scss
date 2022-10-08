@@ -1,0 +1,33 @@
+.options {
+  display: flex;
+  color: rgb(104, 104, 104);
+  font-size: 0.9rem;
+  > li {
+    margin-left: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      > span {
+        color: #ee6c4d;
+      }
+    }
+    > span {
+      transition: all 0.4s;
+      margin-right: 0.3rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .options {
+    > li {
+      margin-left: 0.8rem;
+    }
+    p {
+      display: none;
+    }
+  }
+}

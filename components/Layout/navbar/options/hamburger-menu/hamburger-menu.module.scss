@@ -1,0 +1,27 @@
+.menu {
+  display: none;
+}
+.content {
+  padding-left: 0.5rem;
+
+  li {
+    padding-bottom: 0.5rem;
+  }
+}
+.inner_content {
+  li {
+    border-bottom: 1px solid #ccc;
+    padding-top: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: #ee6c4d;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .menu {
+    display: flex;
+  }
+}
