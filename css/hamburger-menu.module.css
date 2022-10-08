@@ -1,0 +1,32 @@
+.menu {
+  display: none;
+}
+
+.content {
+  padding-left: 0.5rem;
+}
+
+.content li {
+  padding-bottom: 0.5rem;
+}
+
+.inner_content li {
+  border-bottom: 1px solid #ccc;
+  padding-top: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.inner_content li:hover {
+  color: #ee6c4d;
+}
+
+@media screen and (max-width: 1200px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=hamburger-menu.module.css.map */

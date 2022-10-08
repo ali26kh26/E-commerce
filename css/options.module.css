@@ -1,0 +1,39 @@
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #686868;
+  font-size: 0.9rem;
+}
+
+.options > li {
+  margin-left: 1.2rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.options > li:hover > span {
+  color: #ee6c4d;
+}
+
+.options > li > span {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-right: 0.3rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .options > li {
+    margin-left: 0.8rem;
+  }
+  .options p {
+    display: none;
+  }
+}
+/*# sourceMappingURL=options.module.css.map */

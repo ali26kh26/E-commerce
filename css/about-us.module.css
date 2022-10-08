@@ -1,0 +1,81 @@
+.about_us {
+  padding: 0.8rem 3rem;
+  font-size: 0.9rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.about_us ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about_us li:nth-child(3) {
+  width: 15%;
+}
+
+.animation {
+  -webkit-animation: flicker 0.7s ease-in infinite;
+          animation: flicker 0.7s ease-in infinite;
+}
+
+@media screen and (max-width: 1092px) {
+  .about_us > ul > li:nth-child(2) {
+    display: none;
+  }
+  .about_us > ul li:nth-child(3) {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about_us {
+    padding: 0.8rem 1rem;
+  }
+  .about_us > ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about_us > ul li:nth-child(3) {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #ee6c4d;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #ee6c4d;
+  }
+  100% {
+    color: white;
+  }
+}
+/*# sourceMappingURL=about-us.module.css.map */
