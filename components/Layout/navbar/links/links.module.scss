@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  > li {
+    margin-left: 2rem;
+    height: 100%;
+  }
+  .content {
+    display: flex;
+    &_item {
+      padding-right: 2rem;
+      .collection {
+        text-align: center;
+        padding-top: 0.5rem;
+        font-weight: 700;
+      }
+      &_container {
+        li {
+          margin-bottom: 0.5rem;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: #ee6c4d;
+          }
+        }
+        li:nth-child(1) {
+          margin-bottom: 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    display: none;
+  }
+}

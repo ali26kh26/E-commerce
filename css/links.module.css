@@ -1,0 +1,32 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content_item {
+  padding-right: 2rem;
+}
+
+.container .content_item_container li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container .content_item_container li:hover {
+  color: #ee6c4d;
+}
+
+.container .content_item_container li:nth-child(1) {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=links.module.css.map */

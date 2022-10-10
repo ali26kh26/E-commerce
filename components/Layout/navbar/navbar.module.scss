@@ -7,10 +7,18 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.336);
   z-index: 5;
   > ul {
-    padding: 1.5rem 2rem;
+    // padding: 1.5rem 2rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    > li {
+      padding: 1.5rem 0;
+    }
+    > li:nth-child(2) {
+      padding: 0;
+      height: 95px;
+    }
     .logo {
       cursor: pointer;
       width: 100px;
