@@ -23,9 +23,9 @@ const HomePage = () => {
       <div>
         <CountDown />
       </div>
-      {/* <div>
+      <div>
         <Fresh />
-      </div> */}
+      </div>
     </>
   );
 };
