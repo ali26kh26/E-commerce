@@ -1,0 +1,24 @@
+.container {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #ee6c4d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=time-box.module.css.map */

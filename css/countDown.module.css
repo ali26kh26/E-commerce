@@ -1,0 +1,50 @@
+.container {
+  width: 95%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.container .image {
+  margin: 0 auto;
+}
+
+.container .content {
+  position: absolute;
+  width: 40%;
+  height: 100px;
+  top: 50%;
+  height: 100%;
+  max-width: 400px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .content > p {
+  font-size: 1.2rem;
+}
+
+.container .content > h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    height: 300px;
+  }
+}
+/*# sourceMappingURL=countDown.module.css.map */
