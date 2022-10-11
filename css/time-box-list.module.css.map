@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAMpB;;AARD,AAGE,UAHQ,GAGN,IAAI,CAAC;EACL,SAAS,EAAE,IAAI;EAEf,MAAM,EAAE,QAAQ;CACjB",
+    "sources": [
+        "../components/HomePage/countdown/time-box-list/time-box-list.module.scss"
+    ],
+    "names": [],
+    "file": "time-box-list.module.css"
+}
