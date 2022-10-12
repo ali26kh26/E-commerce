@@ -1,8 +1,5 @@
-
-function Title({title}: {title: string}) {
-
-  return <p className="text-2xl font-normal tracking-wide capitalize">{title}</p>
-
+function Title({ title }: { title: string }) {
+  return <p className="font-bold tracking-wide capitalize">{title}</p>;
 }
 
 export default Title;
