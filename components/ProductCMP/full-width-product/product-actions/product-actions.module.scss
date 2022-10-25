@@ -1,0 +1,17 @@
+.action {
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
+  &_items {
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    background-color: #ee6c4d;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+  }
+}

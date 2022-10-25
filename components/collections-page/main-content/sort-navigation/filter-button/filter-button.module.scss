@@ -1,0 +1,18 @@
+.container {
+  align-items: center;
+  font-size: 1.1rem !important;
+  border-right: 2px solid #ccc;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  display: none;
+  cursor: pointer;
+  > p {
+    font-weight: bold;
+    margin-left: 0.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    display: flex;
+  }
+}

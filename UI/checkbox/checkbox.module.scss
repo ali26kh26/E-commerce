@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0px 10px 0px 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0s ease-in-out 0s;
+
+  &:hover {
+    .cust_check {
+      box-shadow: inset 0 0 5px rgb(0 0 0 / 15%);
+      &::after {
+        display: block;
+      }
+    }
+  }
+  .input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border: 1px solid #e5e5e5;
+    max-width: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+  }
+  .filter_name {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .count_check {
+    display: inline-block;
+  }
+  .cust_checked {
+    position: absolute;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgb(0 0 0 / 15%);
+    &::after {
+      content: "\2713";
+      color: #666;
+      font-weight: bold;
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+  }
+  .cust_check {
+    position: absolute;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &::after {
+      display: none;
+      content: "\2713";
+      color: #666;
+      font-weight: bold;
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+  }
+}
+// .checked {
+//   &::after {
+//     display: block;
+//   }
+// }

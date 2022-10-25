@@ -36,7 +36,7 @@ function productContainer({ title, image, price }: props): JSX.Element {
     <div
       onMouseOver={addClass}
       onMouseLeave={removeClass}
-      className="w-fit h-fit flex flex-col items-center bg-white"
+      className=" h-fit flex flex-col items-center bg-white"
     >
       <div className=" bg-white relative overflow-hidden">
         {/* big screen */}
@@ -69,9 +69,9 @@ function productContainer({ title, image, price }: props): JSX.Element {
 
       {/* title */}
       <div className=" mt-2 h-1/3 text-center space-y-2">
-        <Title title={"purple onion"} />
+        <Title title={title} />
         <Score Star={Star} />
-        <Price value={"20.00"} />
+        <Price value={price} />
       </div>
     </div>
   );

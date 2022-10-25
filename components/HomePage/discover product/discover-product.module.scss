@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  .content {
+    display: grid;
+    background-color: red;
+    grid-template-rows: repeat(2, minmax(300px, 1fr));
+    // grid-template-columns: repeat(6, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // gap: 10px;
+    height: 100%;
+    width: 90%;
+    position: relative;
+    // display: flex;
+    // width: 90%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin: 0 auto;
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+
+    .scroll {
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+    }
+    > div {
+      margin: 10px;
+    }
+  }
+}

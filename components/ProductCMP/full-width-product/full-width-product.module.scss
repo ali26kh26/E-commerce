@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  display: flex;
+  .image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    width: 60%;
+    font-size: 0.9rem;
+    > * {
+      margin-top: 0.7rem;
+    }
+    .score {
+      width: 120px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .image {
+      width: 50%;
+    }
+    .content {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    .image {
+      min-height: 300px;
+      width: 100%;
+    }
+    .content {
+      width: 100%;
+    }
+  }
+}
