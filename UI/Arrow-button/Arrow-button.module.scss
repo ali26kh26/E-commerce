@@ -1,0 +1,21 @@
+.container {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  font-size: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+  background-color: #ee6c4d;
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.205) 0px 0px 12px 0px;
+  user-select: none;
+  &:hover {
+    background-color: white;
+    color: #ee6c4d;
+  }
+}

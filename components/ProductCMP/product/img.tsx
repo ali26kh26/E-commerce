@@ -1,14 +1,11 @@
 import Image from "next/image";
 
-
-function Img({src}:{src: string}):JSX.Element {
-
+function Img({ src }: { src: string }): JSX.Element {
   return (
-    <div className=" border-2 border-solid">
-      <Image src={src} width={300} height={300} />
+    <div>
+      <Image src={src} width={220} height={220} quality={100} />
     </div>
-  )
-
+  );
 }
 
 export default Img;

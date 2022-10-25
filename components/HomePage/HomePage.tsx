@@ -4,6 +4,7 @@ import CountDown from "./countdown/CountDown";
 import DiscoverProduct from "./discover product/discover-product";
 import Fresh from "./fresh/Fresh";
 import Superiority from "./Superiority/superiorityContainer";
+import TopSelling from "./top-selling/top-selling";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,9 @@ const HomePage = () => {
       </div> */}
       <div>
         <Banner />
+      </div>
+      <div>
+        <TopSelling />
       </div>
       <div>
         <CountDown />

@@ -1,0 +1,26 @@
+.container {
+  background-color: red;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  font-size: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  background-color: #ee6c4d;
+  color: white;
+  font-weight: bold;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.205) 0px 0px 12px 0px;
+          box-shadow: rgba(0, 0, 0, 0.205) 0px 0px 12px 0px;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+}
+
+.container:hover {
+  background-color: white;
+  color: #ee6c4d;
+}
+/*# sourceMappingURL=Arrow-button.module.css.map */
