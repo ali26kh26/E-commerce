@@ -7,6 +7,7 @@ import CustomButton from "./product/CustomButton";
 import { Eye, Heart, Star } from "../icons";
 import React, { useEffect, useRef } from "react";
 import style from "./animation.module.css";
+import { useRouter } from "next/router";
 
 interface props {
   title: string;
@@ -17,6 +18,7 @@ interface props {
 function productContainer({ title, image, price }: props): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
   const cardButton = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   function addClass(e: React.MouseEvent) {
     customButton.current?.classList.add(style.customAnimate);
@@ -37,6 +39,9 @@ function productContainer({ title, image, price }: props): JSX.Element {
       onMouseOver={addClass}
       onMouseLeave={removeClass}
       className=" h-fit flex flex-col items-center bg-white"
+      onClick={() => {
+        router.push(`/collections/${title}`);
+      }}
     >
       <div className=" bg-white relative overflow-hidden">
         {/* big screen */}

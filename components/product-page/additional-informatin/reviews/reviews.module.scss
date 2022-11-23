@@ -1,0 +1,16 @@
+.container {
+  width: 95%;
+  text-align: left;
+  font-size: 0.9rem;
+  > h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  > p {
+    text-decoration: underline;
+    color: #ee6c4d;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+}

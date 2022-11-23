@@ -1,0 +1,16 @@
+.button {
+  background-color: #ee6c4d;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  transition: all 0.3s;
+  width: 100%;
+  &:hover {
+    background-color: black;
+  }
+  @media (min-width: 768px) {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}
