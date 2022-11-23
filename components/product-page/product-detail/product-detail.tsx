@@ -5,6 +5,7 @@ import classes from "./product-detail.module.scss";
 import ProductQuantity from "./product-quantity/product-quantity";
 import { useState } from "react";
 import PrimaryButton from "../../../UI/primary-button/primary-button";
+import MarkUp from "../../../UI/markup/markup";
 const Productetail = ({ product }: { product: product }) => {
   const [quantity, setQuantity] = useState<number>(1);
   const quantityHandler = (key: number) => {
@@ -42,9 +43,9 @@ const Productetail = ({ product }: { product: product }) => {
       </p>
       <ProductQuantity onChangeQuantity={quantityHandler} value={quantity} />
       <div className={classes.detail_buttons}>
-        <div>
+        <MarkUp text="WISHLIST">
           <PrimaryButton text="&#x2764;" clickHandler={() => void 0} />
-        </div>
+        </MarkUp>
         <div>
           <PrimaryButton text="ADD TO CART" clickHandler={() => void 0} />
         </div>

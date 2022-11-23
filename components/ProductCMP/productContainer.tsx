@@ -8,6 +8,7 @@ import { Eye, Heart, Star } from "../icons";
 import React, { useEffect, useRef } from "react";
 import style from "./animation.module.css";
 import { useRouter } from "next/router";
+import MarkUp from "../../UI/markup/markup";
 
 interface props {
   title: string;
@@ -63,12 +64,22 @@ function productContainer({ title, image, price }: props): JSX.Element {
 
         {/* Small screen */}
         <div className="w-full flex flex-row-reverse justify-center gap-2 mt-3 lg:hidden">
-          <CardButton />
-          <CustomButton Icon={Eye} className={"bg-white p-2.5 rounded-full"} />
-          <CustomButton
-            Icon={Heart}
-            className={"bg-white p-2.5 rounded-full"}
-          />
+          <MarkUp text="ADD TO CART" small>
+            <CardButton />
+          </MarkUp>
+          <MarkUp text="QUICKVIEW" small>
+            <CustomButton
+              Icon={Eye}
+              className={"bg-white p-2.5 rounded-full"}
+            />
+          </MarkUp>
+
+          <MarkUp text="WISHLIST" small>
+            <CustomButton
+              Icon={Heart}
+              className={"bg-white p-2.5 rounded-full"}
+            />
+          </MarkUp>
         </div>
       </div>
 
