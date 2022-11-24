@@ -20,6 +20,7 @@ const CheckBox = ({ title, checked, id, value, quantity }: Props) => {
         value={value}
         checked={checked}
         className={classes.input}
+        readOnly
       />
       <span className={classes.fiter_name}>{title}</span>
       <span className={classes.count_check}>({quantity})</span>
