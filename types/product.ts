@@ -5,6 +5,7 @@ type product = {
   slug: string;
   in_stock: boolean;
   size: Array<string>;
+  discount?: number;
 };
 
 export default product;
