@@ -10,20 +10,9 @@ import style from "./animation.module.css";
 import { useRouter } from "next/router";
 import MarkUp from "../../UI/markup/markup";
 import DiscountBadge from "./product/discount-badge/discount-badge";
+import product from "../../types/product";
 
-interface props {
-  title: string;
-  image: string;
-  price: number;
-  discount: number;
-}
-
-function productContainer({
-  title,
-  image,
-  price,
-  discount,
-}: props): JSX.Element {
+function productContainer({ product }: { product: product }): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
   const cardButton = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -48,7 +37,7 @@ function productContainer({
       onMouseLeave={removeClass}
       className=" relative h-fit flex flex-col items-center bg-white"
       onClick={() => {
-        router.push(`/collections/${title}`);
+        router.push(`/collections/${product.name}`);
       }}
     >
       <div className=" bg-white relative overflow-hidden">
@@ -62,7 +51,7 @@ function productContainer({
         </div>
 
         {/* Image */}
-        <Img src={"/assets/productIMG/onion_1024x1024.webp"} />
+        <Img src={product.image} />
 
         {/* big screen */}
         <div ref={cardButton} className={style.cardButtom}>
@@ -92,11 +81,13 @@ function productContainer({
 
       {/* title */}
       <div className=" mt-2 h-1/3 text-center space-y-2">
-        <Title title={title} />
+        <Title title={product.name} />
         <Score Star={Star} />
-        <Price discount={56} value={price} />
+        <Price discount={product.discount} value={product.price} />
       </div>
-      <DiscountBadge relative discount={56} />
+      {product.discount && (
+        <DiscountBadge relative discount={product.discount} />
+      )}
     </div>
   );
 }

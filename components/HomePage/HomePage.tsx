@@ -1,3 +1,4 @@
+import product from "../../types/product";
 import Banner from "./banner/Banner";
 import Container from "./Category/Container";
 import CountDown from "./countdown/CountDown";
@@ -6,7 +7,7 @@ import Fresh from "./fresh/Fresh";
 import Superiority from "./Superiority/superiorityContainer";
 import TopSelling from "./top-selling/top-selling";
 
-const HomePage = () => {
+const HomePage = ({ products }: { products: Array<product> }) => {
   return (
     <>
       <div className="w-full p-16 flex justify-center">
@@ -22,7 +23,7 @@ const HomePage = () => {
         <Banner />
       </div>
       <div>
-        <TopSelling />
+        <TopSelling products={products} />
       </div>
       <div>
         <CountDown />

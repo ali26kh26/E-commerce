@@ -6,7 +6,7 @@ import {
 
 export async function getAllProducts() {
   const client = await connectToDataBase();
-  const products = await getAllDocuments(client, "products");
+  const products = await getAllDocuments(client, "products", {}, { _id: 0 });
   return products;
 }
 export async function getSingleProduct(slug: string) {
