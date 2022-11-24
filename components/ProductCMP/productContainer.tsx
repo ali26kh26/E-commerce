@@ -9,14 +9,21 @@ import React, { useEffect, useRef } from "react";
 import style from "./animation.module.css";
 import { useRouter } from "next/router";
 import MarkUp from "../../UI/markup/markup";
+import DiscountBadge from "./product/discount-badge/discount-badge";
 
 interface props {
   title: string;
   image: string;
   price: number;
+  discount: number;
 }
 
-function productContainer({ title, image, price }: props): JSX.Element {
+function productContainer({
+  title,
+  image,
+  price,
+  discount,
+}: props): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
   const cardButton = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -39,7 +46,7 @@ function productContainer({ title, image, price }: props): JSX.Element {
     <div
       onMouseOver={addClass}
       onMouseLeave={removeClass}
-      className=" h-fit flex flex-col items-center bg-white"
+      className=" relative h-fit flex flex-col items-center bg-white"
       onClick={() => {
         router.push(`/collections/${title}`);
       }}
@@ -87,8 +94,9 @@ function productContainer({ title, image, price }: props): JSX.Element {
       <div className=" mt-2 h-1/3 text-center space-y-2">
         <Title title={title} />
         <Score Star={Star} />
-        <Price value={price} />
+        <Price discount={56} value={price} />
       </div>
+      <DiscountBadge relative discount={56} />
     </div>
   );
 }

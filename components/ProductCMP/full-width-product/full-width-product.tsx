@@ -11,9 +11,10 @@ interface Props {
   text: string;
   title: string;
   price: number;
+  discount?: number;
 }
 
-const FullWidthProduct = ({ image, text, title, price }: Props) => {
+const FullWidthProduct = ({ image, text, title, price, discount }: Props) => {
   return (
     <div className={classes.container}>
       <div className={classes.image}>
@@ -25,7 +26,7 @@ const FullWidthProduct = ({ image, text, title, price }: Props) => {
           <Score Star={Star} />
         </div>
         <Title title={title} />
-        <Price value={price} />
+        <Price discount={56} value={price} />
         <p className={classes.description}>{text}</p>
         <ProductActions />
       </div>

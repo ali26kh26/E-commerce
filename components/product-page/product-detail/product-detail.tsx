@@ -6,6 +6,7 @@ import ProductQuantity from "./product-quantity/product-quantity";
 import { useState } from "react";
 import PrimaryButton from "../../../UI/primary-button/primary-button";
 import MarkUp from "../../../UI/markup/markup";
+import DiscountBadge from "../../ProductCMP/product/discount-badge/discount-badge";
 const Productetail = ({ product }: { product: product }) => {
   const [quantity, setQuantity] = useState<number>(1);
   const quantityHandler = (key: number) => {
@@ -15,6 +16,9 @@ const Productetail = ({ product }: { product: product }) => {
       setQuantity((prev) => prev - 1);
     }
   };
+  function calcDiscountPrice(price: number, discount: number) {
+    return price - price * (discount / 100);
+  }
   return (
     <div className={classes.detail}>
       <h1>{product.name}</h1>
@@ -35,7 +39,17 @@ const Productetail = ({ product }: { product: product }) => {
           <p style={{ color: "red", marginLeft: "5px" }}>not in stock</p>
         )}
       </div>
-      <p className={classes.detail_price}>${product.price}</p>
+      <div className={classes.detail_price}>
+        {product.discount && (
+          <span>${calcDiscountPrice(product.price, product.discount)}</span>
+        )}
+        <span
+          style={product.discount ? { textDecoration: "line-through" } : {}}
+        >
+          ${product.price}
+        </span>
+        {product.discount && <DiscountBadge discount={product.discount} />}
+      </div>
       <p className={classes.detail_description}>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -57,5 +71,4 @@ const Productetail = ({ product }: { product: product }) => {
     </div>
   );
 };
-
 export default Productetail;
