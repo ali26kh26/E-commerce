@@ -32,7 +32,7 @@ const CheckBoxFilterItem = ({ title, options }: Props) => {
         </div>
         <ul className={classes.content}>
           {options.map((item) => (
-            <li onClick={(e) => clickHandler(e, item.title)}>
+            <li key={item.id} onClick={(e) => clickHandler(e, item.title)}>
               <CheckBox {...item} checked={values[item.title]} />
             </li>
           ))}

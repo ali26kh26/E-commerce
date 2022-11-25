@@ -1,0 +1,28 @@
+.outer {
+  position: relative;
+  .markup {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    width: max-content;
+    left: 50%;
+    top: -40px;
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -30%;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 12px solid black;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+.small {
+  font-size: 0.9rem !important;
+  top: -30px !important;
+}

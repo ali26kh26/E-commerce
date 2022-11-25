@@ -1,69 +1,13 @@
+import product from "../../../../types/product";
 import { Product } from "../../../ProductCMP";
 import classes from "./grid-products.module.scss";
 
-const GridProducts = () => {
+const GridProducts = ({ products }: { products: Array<product> }) => {
   return (
     <div className={classes.container}>
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
-      <Product
-        title="Purple onion"
-        price={20.0}
-        image="/assets/productIMG/onion_1024x1024.webp"
-      />
+      {products.map((product) => (
+        <Product key={product.slug} product={product} />
+      ))}
     </div>
   );
 };
