@@ -1,0 +1,54 @@
+.outer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+  cursor: default;
+  color: black;
+  .inner {
+    width: 60vw;
+    min-width: 650px;
+    // height: 60vh;
+    background-color: white;
+    position: relative;
+    top: -30vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+  }
+  .cancel {
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+.visible {
+  visibility: visible;
+}
+.fix {
+  top: 50% !important;
+  left: 50%;
+}
+
+@media (max-width: 768px) {
+  .outer {
+    .inner {
+      width: 50vw;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .outer {
+    .inner {
+      width: 60vw;
+      padding: 8% 1rem;
+    }
+  }
+}

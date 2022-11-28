@@ -2,7 +2,7 @@
   position: relative;
   .markup {
     position: absolute;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     padding: 0.2rem 0.5rem;
     width: max-content;
@@ -16,7 +16,7 @@
       bottom: -30%;
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-top: 12px solid black;
+      border-top: 12px solid rgba(0, 0, 0, 0.9);
       left: 50%;
       transform: translate(-50%, 0);
     }

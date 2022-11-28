@@ -26,7 +26,7 @@ const FullWidthProduct = ({ product }: { product: product }) => {
           aliquid possimus voluptatem dolorem placeat unde quisquam iusto
           eligendi praesentium similique ipsam?
         </p>
-        <ProductActions />
+        <ProductActions product={product} />
       </div>
     </div>
   );

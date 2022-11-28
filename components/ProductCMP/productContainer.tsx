@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import MarkUp from "../../UI/markup/markup";
 import DiscountBadge from "./product/discount-badge/discount-badge";
 import product from "../../types/product";
+import QuickViewButton from "./product/quick-view-button/quick-view-button";
 
 function productContainer({ product }: { product: product }): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
@@ -36,18 +37,33 @@ function productContainer({ product }: { product: product }): JSX.Element {
       onMouseOver={addClass}
       onMouseLeave={removeClass}
       className=" relative h-fit flex flex-col items-center bg-white"
-      onClick={() => {
-        router.push(`/collections/${product.name}`);
-      }}
+      // onClick={() => {
+      //   router.push(`/collections/${product.name}`);
+      // }}
     >
       <div className=" bg-white relative overflow-hidden">
         {/* big screen */}
         <div ref={customButton} className={style.customButtom}>
-          <CustomButton
-            Icon={Heart}
-            className={"bg-white p-2.5 rounded-full"}
-          />
-          <CustomButton Icon={Eye} className={" bg-white p-2.5 rounded-full"} />
+          <MarkUp text="WISHLIST" small>
+            <CustomButton
+              Icon={Heart}
+              className={
+                "bg-white shadow-md cursor-pointer p-2 rounded-full mb-4"
+              }
+            />
+          </MarkUp>
+          {/* <MarkUp text="QUICKVEIW" small>
+            <CustomButton
+              Icon={Eye}
+              className={" bg-white cursor-pointer shadow-md p-2 rounded-full"}
+            />
+          </MarkUp> */}
+          <QuickViewButton product={product}>
+            <CustomButton
+              Icon={Eye}
+              className={" bg-white cursor-pointer shadow-md p-2 rounded-full"}
+            />
+          </QuickViewButton>
         </div>
 
         {/* Image */}
@@ -59,21 +75,23 @@ function productContainer({ product }: { product: product }): JSX.Element {
         </div>
 
         {/* Small screen */}
-        <div className="w-full flex flex-row-reverse justify-center gap-2 mt-3 lg:hidden">
+        <div className="w-full flex p-2 flex-row-reverse items-center justify-center gap-2  lg:hidden">
           <MarkUp text="ADD TO CART" small>
             <CardButton />
           </MarkUp>
-          <MarkUp text="QUICKVIEW" small>
-            <CustomButton
-              Icon={Eye}
-              className={"bg-white p-2.5 rounded-full"}
-            />
-          </MarkUp>
 
+          <QuickViewButton product={product}>
+            <MarkUp text="QUICKVIEW" small>
+              <CustomButton
+                Icon={Eye}
+                className={"bg-white cursor-pointer shadow-xl p-2 rounded-full"}
+              />
+            </MarkUp>
+          </QuickViewButton>
           <MarkUp text="WISHLIST" small>
             <CustomButton
               Icon={Heart}
-              className={"bg-white p-2.5 rounded-full"}
+              className={"bg-white cursor-pointer shadow-xl p-2 rounded-full"}
             />
           </MarkUp>
         </div>

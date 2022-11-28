@@ -7,8 +7,8 @@ interface AppProps {
 
 function CustomButton({ Icon, className }: AppProps) {
   return (
-    <div className={className}>
-      {<Icon className={"fill-gray-700  hover:fill-amber-500  w-6"} />}
+    <div style={{ boxShadow: "0 0 20px -5px " }} className={className}>
+      {<Icon className={"fill-gray-900  hover:fill-amber-600  w-4"} />}
     </div>
   );
 }

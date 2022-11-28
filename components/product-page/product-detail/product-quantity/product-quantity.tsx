@@ -2,11 +2,12 @@ import classes from "./product-quantity.module.scss";
 interface Props {
   value: number;
   onChangeQuantity: (key: number) => void;
+  quickview?: boolean;
 }
-const ProductQuantity = ({ value, onChangeQuantity }: Props) => {
+const ProductQuantity = ({ value, onChangeQuantity, quickview }: Props) => {
   return (
     <div className={classes.container}>
-      <p>Quantity:</p>
+      {!quickview && <p>Quantity:</p>}
       <div>
         <div
           className={classes.handler}

@@ -11,12 +11,13 @@ const MarkUp = ({ children, text, small }: Props) => {
   return (
     <div
       className={classes.outer}
-      onMouseEnter={() => setshowMarkup((prev) => !prev)}
-      onMouseLeave={() => setshowMarkup((prev) => !prev)}
+      onMouseEnter={() => setshowMarkup((prev) => true)}
+      onMouseLeave={() => setshowMarkup((prev) => false)}
     >
       {showMarkup && (
         <>
           <div
+            onMouseEnter={() => setshowMarkup((prev) => false)}
             className={
               `${classes.markup} ` +
               " " +
