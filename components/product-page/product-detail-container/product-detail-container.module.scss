@@ -1,0 +1,14 @@
+.product {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .product {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .product {
+    margin-right: 2rem;
+  }
+}

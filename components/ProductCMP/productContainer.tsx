@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import MarkUp from "../../UI/markup/markup";
 import DiscountBadge from "./product/discount-badge/discount-badge";
 import product from "../../types/product";
+import QuickViewButton from "./product/quick-view-button/quick-view-button";
 
 function productContainer({ product }: { product: product }): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
@@ -36,9 +37,9 @@ function productContainer({ product }: { product: product }): JSX.Element {
       onMouseOver={addClass}
       onMouseLeave={removeClass}
       className=" relative h-fit flex flex-col items-center bg-white"
-      onClick={() => {
-        router.push(`/collections/${product.name}`);
-      }}
+      // onClick={() => {
+      //   router.push(`/collections/${product.name}`);
+      // }}
     >
       <div className=" bg-white relative overflow-hidden">
         {/* big screen */}
@@ -51,12 +52,18 @@ function productContainer({ product }: { product: product }): JSX.Element {
               }
             />
           </MarkUp>
-          <MarkUp text="QUICKVEIW" small>
+          {/* <MarkUp text="QUICKVEIW" small>
             <CustomButton
               Icon={Eye}
               className={" bg-white cursor-pointer shadow-md p-2 rounded-full"}
             />
-          </MarkUp>
+          </MarkUp> */}
+          <QuickViewButton product={product}>
+            <CustomButton
+              Icon={Eye}
+              className={" bg-white cursor-pointer shadow-md p-2 rounded-full"}
+            />
+          </QuickViewButton>
         </div>
 
         {/* Image */}
@@ -72,13 +79,15 @@ function productContainer({ product }: { product: product }): JSX.Element {
           <MarkUp text="ADD TO CART" small>
             <CardButton />
           </MarkUp>
-          <MarkUp text="QUICKVIEW" small>
-            <CustomButton
-              Icon={Eye}
-              className={"bg-white cursor-pointer shadow-xl  p-2 rounded-full"}
-            />
-          </MarkUp>
 
+          <QuickViewButton product={product}>
+            <MarkUp text="QUICKVIEW" small>
+              <CustomButton
+                Icon={Eye}
+                className={"bg-white cursor-pointer shadow-xl p-2 rounded-full"}
+              />
+            </MarkUp>
+          </QuickViewButton>
           <MarkUp text="WISHLIST" small>
             <CustomButton
               Icon={Heart}

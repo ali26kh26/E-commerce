@@ -7,7 +7,15 @@ import { useState } from "react";
 import PrimaryButton from "../../../UI/primary-button/primary-button";
 import MarkUp from "../../../UI/markup/markup";
 import DiscountBadge from "../../ProductCMP/product/discount-badge/discount-badge";
-const Productetail = ({ product }: { product: product }) => {
+import ProductActions from "../../ProductCMP/full-width-product/product-actions/product-actions";
+import SelectSize from "./select-size/select-size";
+const Productetail = ({
+  product,
+  quickview,
+}: {
+  product: product;
+  quickview?: boolean;
+}) => {
   const [quantity, setQuantity] = useState<number>(1);
   const quantityHandler = (key: number) => {
     if (key === 1) {
@@ -19,10 +27,18 @@ const Productetail = ({ product }: { product: product }) => {
   function calcDiscountPrice(price: number, discount: number) {
     return price - price * (discount / 100);
   }
+  const summarize = (text: string) => {
+    if (text.length > 35) {
+      return text.slice(0, 58) + " ....";
+    } else return text;
+  };
+  const dummy_text =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.";
   return (
     <div className={classes.detail}>
       <h1>{product.name}</h1>
-      <hr />
+      {!quickview && <hr />}
+
       <div className={classes.detail_score}>
         <Score Star={Star} />
       </div>
@@ -51,23 +67,33 @@ const Productetail = ({ product }: { product: product }) => {
         {product.discount && <DiscountBadge discount={product.discount} />}
       </div>
       <p className={classes.detail_description}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s.
+        {quickview ? summarize(dummy_text) : dummy_text}
       </p>
-      <ProductQuantity onChangeQuantity={quantityHandler} value={quantity} />
-      <div className={classes.detail_buttons}>
-        <MarkUp text="WISHLIST">
-          <PrimaryButton text="&#x2764;" clickHandler={() => void 0} />
-        </MarkUp>
-        <div>
-          <PrimaryButton text="ADD TO CART" clickHandler={() => void 0} />
+      {quickview && <SelectSize sizes={product.size} />}
+      <ProductQuantity
+        quickview
+        onChangeQuantity={quantityHandler}
+        value={quantity}
+      />
+      {quickview ? (
+        <div style={{ margin: "1rem 0" }}>
+          <ProductActions product={product} quickview />
         </div>
-        <div>
-          <PrimaryButton text="BUY NOW" clickHandler={() => void 0} />
+      ) : (
+        <div className={classes.detail_buttons}>
+          <MarkUp text="WISHLIST">
+            <PrimaryButton text="&#x2764;" clickHandler={() => void 0} />
+          </MarkUp>
+          <div>
+            <PrimaryButton text="ADD TO CART" clickHandler={() => void 0} />
+          </div>
+          <div>
+            <PrimaryButton text="BUY NOW" clickHandler={() => void 0} />
+          </div>
         </div>
-      </div>
-      <hr />
+      )}
+
+      {!quickview && <hr />}
     </div>
   );
 };

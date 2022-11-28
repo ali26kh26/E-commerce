@@ -7,6 +7,7 @@ import Productetail from "./product-detail/product-detail";
 import ProductDelivery from "./product-delivery/product-delivery";
 import ProductImage from "./prodcut-image/product-image";
 import AdditionalInfo from "./additional-informatin/additional-information";
+import ProductDetailContainer from "./product-detail-container/product-detail-container";
 interface Props {
   product: product;
 }
@@ -15,10 +16,7 @@ const ProductPage = ({ product }: Props) => {
   return (
     <>
       <div className={classes.container}>
-        <div className={classes.product}>
-          <ProductImage path={product.image} />
-          <Productetail product={product} />
-        </div>
+        <ProductDetailContainer product={product} />
         <ProductDelivery />
       </div>
       <AdditionalInfo product={product} />
