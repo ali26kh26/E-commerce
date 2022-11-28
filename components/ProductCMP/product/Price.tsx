@@ -9,9 +9,11 @@ function Price({
     return (price - price * (discount / 100)).toFixed(2);
   }
   return (
-    <div className="flex font-bold pt-1 text-lg">
+    <div className="flex justify-between font-bold pt-1 ">
       {discount && <p>${calcDiscountPrice(value, discount)}</p>}
-      <p className={`ml-2 ` + `${discount ? "line-through" : ""}`}>
+      <p
+        className={`ml-2 ` + `${discount ? "line-through text-gray-600" : ""}`}
+      >
         ${value.toFixed(2)}
       </p>
     </div>
