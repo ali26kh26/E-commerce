@@ -9,6 +9,7 @@ import MarkUp from "../../../UI/markup/markup";
 import DiscountBadge from "../../ProductCMP/product/discount-badge/discount-badge";
 import ProductActions from "../../ProductCMP/full-width-product/product-actions/product-actions";
 import SelectSize from "./select-size/select-size";
+import AddToCartButton from "../../ProductCMP/product/add-to-cart-button/add-to-cart-button";
 const Productetail = ({
   product,
   quickview,
@@ -77,16 +78,16 @@ const Productetail = ({
       />
       {quickview ? (
         <div style={{ margin: "1rem 0" }}>
-          <ProductActions product={product} quickview />
+          <ProductActions quantity={quantity} product={product} quickview />
         </div>
       ) : (
         <div className={classes.detail_buttons}>
           <MarkUp text="WISHLIST">
             <PrimaryButton text="&#x2764;" clickHandler={() => void 0} />
           </MarkUp>
-          <div>
+          <AddToCartButton product={product} quantity={quantity}>
             <PrimaryButton text="ADD TO CART" clickHandler={() => void 0} />
-          </div>
+          </AddToCartButton>
           <div>
             <PrimaryButton text="BUY NOW" clickHandler={() => void 0} />
           </div>

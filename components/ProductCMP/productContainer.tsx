@@ -12,6 +12,7 @@ import MarkUp from "../../UI/markup/markup";
 import DiscountBadge from "./product/discount-badge/discount-badge";
 import product from "../../types/product";
 import QuickViewButton from "./product/quick-view-button/quick-view-button";
+import AddToCartButton from "./product/add-to-cart-button/add-to-cart-button";
 
 function productContainer({ product }: { product: product }): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
@@ -52,17 +53,15 @@ function productContainer({ product }: { product: product }): JSX.Element {
               }
             />
           </MarkUp>
-          {/* <MarkUp text="QUICKVEIW" small>
-            <CustomButton
-              Icon={Eye}
-              className={" bg-white cursor-pointer shadow-md p-2 rounded-full"}
-            />
-          </MarkUp> */}
           <QuickViewButton product={product}>
-            <CustomButton
-              Icon={Eye}
-              className={" bg-white cursor-pointer shadow-md p-2 rounded-full"}
-            />
+            <MarkUp text="QUICKVIEW" small>
+              <CustomButton
+                Icon={Eye}
+                className={
+                  " bg-white cursor-pointer shadow-md p-2 rounded-full"
+                }
+              />
+            </MarkUp>
           </QuickViewButton>
         </div>
 
@@ -71,14 +70,18 @@ function productContainer({ product }: { product: product }): JSX.Element {
 
         {/* big screen */}
         <div ref={cardButton} className={style.cardButtom}>
-          <CardButton />
+          <AddToCartButton product={product}>
+            <CardButton />
+          </AddToCartButton>
         </div>
 
         {/* Small screen */}
         <div className="w-full flex p-2 flex-row-reverse items-center justify-center gap-2  lg:hidden">
-          <MarkUp text="ADD TO CART" small>
-            <CardButton />
-          </MarkUp>
+          <AddToCartButton product={product}>
+            <MarkUp text="ADD TO CART" small>
+              <CardButton />
+            </MarkUp>
+          </AddToCartButton>
 
           <QuickViewButton product={product}>
             <MarkUp text="QUICKVIEW" small>

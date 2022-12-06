@@ -5,9 +5,13 @@ import {
   AiOutlineShopping,
   AiOutlineMenu,
 } from "react-icons/ai";
+import { useAppSelector } from "../../../../hooks/hooks";
+import NotificationBadge from "../../../../UI/notification/notification";
+import AddToCartButton from "../../../ProductCMP/product/add-to-cart-button/add-to-cart-button";
 import HamburgerMenu from "./hamburger-menu/hamburger-menu";
 import classes from "./options.module.scss";
 const Options = () => {
+  const { cart } = useAppSelector((state) => state);
   return (
     <ul className={classes.options}>
       <HamburgerMenu />
@@ -29,12 +33,16 @@ const Options = () => {
         </span>
         <p> Wishlist</p>
       </li>
-      <li>
-        <span>
-          <AiOutlineShopping />
-        </span>
-        <p> My cart</p>
-      </li>
+      <AddToCartButton>
+        <NotificationBadge value={cart.total_items}>
+          <li>
+            <span>
+              <AiOutlineShopping />
+            </span>
+            <p> My cart</p>
+          </li>
+        </NotificationBadge>
+      </AddToCartButton>
     </ul>
   );
 };
