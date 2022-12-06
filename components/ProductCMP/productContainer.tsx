@@ -13,11 +13,15 @@ import DiscountBadge from "./product/discount-badge/discount-badge";
 import product from "../../types/product";
 import QuickViewButton from "./product/quick-view-button/quick-view-button";
 import AddToCartButton from "./product/add-to-cart-button/add-to-cart-button";
+import AddToWishListButton from "./product/add-to-wishlist-button/add-to-wishlist-button";
+import { useAppSelector } from "../../hooks/hooks";
+import { AiOutlineClose } from "react-icons/ai";
 
 function productContainer({ product }: { product: product }): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
   const cardButton = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const wishlist = useAppSelector((state) => state.wishlist);
 
   function addClass(e: React.MouseEvent) {
     customButton.current?.classList.add(style.customAnimate);
@@ -32,7 +36,23 @@ function productContainer({ product }: { product: product }): JSX.Element {
     customButton.current?.classList.remove(style.customAnimate);
     cardButton.current?.classList.remove(style.cardAnimate);
   }
-
+  const is_in_wishlist = () => {
+    const index = wishlist.items.findIndex(
+      (item) => item.name === product.name
+    );
+    if (index >= 0) {
+      return DeleteWishlistButton;
+    } else {
+      return Heart;
+    }
+  };
+  const DeleteWishlistButton = () => {
+    return (
+      <span className="hover:text-orange-600">
+        <AiOutlineClose />
+      </span>
+    );
+  };
   return (
     <div
       onMouseOver={addClass}
@@ -46,12 +66,14 @@ function productContainer({ product }: { product: product }): JSX.Element {
         {/* big screen */}
         <div ref={customButton} className={style.customButtom}>
           <MarkUp text="WISHLIST" small>
-            <CustomButton
-              Icon={Heart}
-              className={
-                "bg-white shadow-md cursor-pointer p-2 rounded-full mb-4"
-              }
-            />
+            <AddToWishListButton product={product}>
+              <CustomButton
+                Icon={is_in_wishlist()}
+                className={
+                  "bg-white shadow-md cursor-pointer p-2 rounded-full mb-4"
+                }
+              />
+            </AddToWishListButton>
           </MarkUp>
           <QuickViewButton product={product}>
             <MarkUp text="QUICKVIEW" small>
@@ -91,12 +113,14 @@ function productContainer({ product }: { product: product }): JSX.Element {
               />
             </MarkUp>
           </QuickViewButton>
-          <MarkUp text="WISHLIST" small>
-            <CustomButton
-              Icon={Heart}
-              className={"bg-white cursor-pointer shadow-xl p-2 rounded-full"}
-            />
-          </MarkUp>
+          <AddToWishListButton product={product}>
+            <MarkUp text="WISHLIST" small>
+              <CustomButton
+                Icon={is_in_wishlist()}
+                className={"bg-white cursor-pointer shadow-xl p-2 rounded-full"}
+              />
+            </MarkUp>
+          </AddToWishListButton>
         </div>
       </div>
 

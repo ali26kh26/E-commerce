@@ -4,6 +4,8 @@ import MarkUp from "../../../../UI/markup/markup";
 import QuickViewButton from "../../product/quick-view-button/quick-view-button";
 import product from "../../../../types/product";
 import AddToCartButton from "../../product/add-to-cart-button/add-to-cart-button";
+import WishlistIcon from "./wishlist-icon/wishlist-icon";
+import AddToWishListButton from "../../product/add-to-wishlist-button/add-to-wishlist-button";
 const ProductActions = ({
   quickview,
   product,
@@ -33,9 +35,11 @@ const ProductActions = ({
         </QuickViewButton>
       )}
       <MarkUp text="WISHLIST">
-        <div className={classes.action_items}>
-          <FaHeart />
-        </div>
+        <AddToWishListButton product={product}>
+          <div className={classes.action_items}>
+            <WishlistIcon product={product} />
+          </div>
+        </AddToWishListButton>
       </MarkUp>
     </div>
   );

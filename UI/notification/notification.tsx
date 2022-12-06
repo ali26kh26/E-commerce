@@ -7,13 +7,10 @@ const NotificationBadge = ({
   children: React.ReactNode;
   value: number;
 }) => {
-  if (value === 0) {
-    return <div></div>;
-  }
   return (
     <div className={classes.container}>
       {children}
-      <div className={classes.inner}>{value}</div>
+      {value !== 0 && <div className={classes.inner}>{value}</div>}
     </div>
   );
 };

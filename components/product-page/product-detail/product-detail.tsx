@@ -10,6 +10,8 @@ import DiscountBadge from "../../ProductCMP/product/discount-badge/discount-badg
 import ProductActions from "../../ProductCMP/full-width-product/product-actions/product-actions";
 import SelectSize from "./select-size/select-size";
 import AddToCartButton from "../../ProductCMP/product/add-to-cart-button/add-to-cart-button";
+import WishlistIcon from "../../ProductCMP/full-width-product/product-actions/wishlist-icon/wishlist-icon";
+import AddToWishListButton from "../../ProductCMP/product/add-to-wishlist-button/add-to-wishlist-button";
 const Productetail = ({
   product,
   quickview,
@@ -83,13 +85,19 @@ const Productetail = ({
       ) : (
         <div className={classes.detail_buttons}>
           <MarkUp text="WISHLIST">
-            <PrimaryButton text="&#x2764;" clickHandler={() => void 0} />
+            <AddToWishListButton product={product}>
+              <PrimaryButton clickHandler={() => void 0}>
+                <WishlistIcon product={product} />
+              </PrimaryButton>
+            </AddToWishListButton>
           </MarkUp>
           <AddToCartButton product={product} quantity={quantity}>
-            <PrimaryButton text="ADD TO CART" clickHandler={() => void 0} />
+            <PrimaryButton clickHandler={() => void 0}>
+              ADD TO CART
+            </PrimaryButton>
           </AddToCartButton>
           <div>
-            <PrimaryButton text="BUY NOW" clickHandler={() => void 0} />
+            <PrimaryButton clickHandler={() => void 0}>BUY NOW</PrimaryButton>
           </div>
         </div>
       )}

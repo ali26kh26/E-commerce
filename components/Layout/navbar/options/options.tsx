@@ -11,7 +11,7 @@ import AddToCartButton from "../../../ProductCMP/product/add-to-cart-button/add-
 import HamburgerMenu from "./hamburger-menu/hamburger-menu";
 import classes from "./options.module.scss";
 const Options = () => {
-  const { cart } = useAppSelector((state) => state);
+  const { cart, wishlist } = useAppSelector((state) => state);
   return (
     <ul className={classes.options}>
       <HamburgerMenu />
@@ -27,12 +27,15 @@ const Options = () => {
         </span>
         <p> Account</p>
       </li>
-      <li>
-        <span>
-          <AiOutlineHeart />{" "}
-        </span>
-        <p> Wishlist</p>
-      </li>
+      <NotificationBadge value={wishlist.total_items}>
+        <li>
+          <span>
+            <AiOutlineHeart />{" "}
+          </span>
+          <p> Wishlist</p>
+        </li>
+      </NotificationBadge>
+
       <AddToCartButton>
         <NotificationBadge value={cart.total_items}>
           <li>
