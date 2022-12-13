@@ -1,0 +1,41 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  hr {
+    margin: 1rem 0;
+  }
+  .top {
+    > h2 {
+      font-weight: bold;
+      > span {
+        color: #ee6c4d;
+      }
+    }
+    .items {
+      margin-top: 0.5rem;
+      > div {
+        margin-top: 0.8rem;
+      }
+    }
+  }
+
+  .bottom {
+    .total {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      p:nth-child(2) {
+        color: #ee6c4d;
+      }
+    }
+  }
+  .buttons {
+    *:nth-child(1) {
+      margin-bottom: 1rem;
+    }
+  }
+}

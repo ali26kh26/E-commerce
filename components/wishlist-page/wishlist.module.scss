@@ -1,0 +1,26 @@
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  hr {
+    margin: 0.8rem 0;
+  }
+  > header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    p:nth-child(2) {
+      font-size: 0.9rem;
+      text-decoration: underline;
+    }
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    > p {
+      color: #ee6c4d;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

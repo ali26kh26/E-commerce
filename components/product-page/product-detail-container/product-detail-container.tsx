@@ -12,7 +12,7 @@ const ProductDetailContainer = ({
   return (
     <div className={classes.product}>
       <ProductImage path={product.image} />
-      <Productetail product={product} quickview />
+      <Productetail product={product} quickview={quickview} />
     </div>
   );
 };

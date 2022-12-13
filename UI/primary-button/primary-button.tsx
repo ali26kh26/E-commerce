@@ -1,15 +1,16 @@
+import { IconType } from "react-icons/lib";
 import classes from "./primary-button.module.scss";
 
 const PrimaryButton = ({
-  text,
   clickHandler,
+  children,
 }: {
-  text: string;
   clickHandler: () => void;
+  children: React.ReactNode;
 }) => {
   return (
     <button onClick={clickHandler} className={classes.button}>
-      <>{text}</>
+      {children}
     </button>
   );
 };
