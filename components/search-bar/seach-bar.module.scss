@@ -1,0 +1,75 @@
+.outer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+  cursor: default;
+  color: black;
+  transition: all 0.5s;
+  .inner {
+    width: 100vw;
+    height: 20vh;
+    background-color: white;
+    position: relative;
+    top: -30vw;
+    transition: all 0.5s;
+    padding: 1rem;
+    .content {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4vh;
+
+      @media (max-width: 720px) {
+        width: 90%;
+      }
+      .input {
+        position: relative;
+        width: 100%;
+        > input {
+          width: 100%;
+          border: 1px solid grey;
+          outline: none;
+          border-radius: 5px;
+          height: 40px;
+          padding: 0.5rem;
+        }
+        .search_icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: black;
+          color: white;
+          border-radius: 0 5px 5px 0;
+          cursor: pointer;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 0.5rem;
+          font-size: 2rem;
+        }
+      }
+      .close_icon {
+        margin-left: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+.visible {
+  visibility: visible;
+}
+.fix {
+  top: 0 !important;
+}
