@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  align-items: center;
+  .head {
+    width: 40%;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+
+    > h2 {
+      font-weight: bold;
+    }
+  }
+  .body {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .add {
+      color: #ee6c4d;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .price_icon {
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin: 0.5rem;
+      transition: all 0.3s;
+      &:hover {
+        color: #ee6c4d;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    .body {
+      width: 100%;
+      justify-content: space-evenly;
+      .price {
+        width: 40%;
+        justify-content: space-between;
+        display: flex;
+      }
+    }
+  }
+}

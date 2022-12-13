@@ -46,7 +46,7 @@ export const cartSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-    clear_wishlist: (state, action: PayloadAction<product>) => {
+    clear_wishlist: (state) => {
       state.total_items = 0;
       state.items = [];
     },

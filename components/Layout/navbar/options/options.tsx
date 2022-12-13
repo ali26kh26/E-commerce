@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {
   AiOutlineSearch,
   AiOutlineUser,
@@ -12,6 +13,7 @@ import HamburgerMenu from "./hamburger-menu/hamburger-menu";
 import classes from "./options.module.scss";
 const Options = () => {
   const { cart, wishlist } = useAppSelector((state) => state);
+  const router = useRouter();
   return (
     <ul className={classes.options}>
       <HamburgerMenu />
@@ -28,7 +30,7 @@ const Options = () => {
         <p> Account</p>
       </li>
       <NotificationBadge value={wishlist.total_items}>
-        <li>
+        <li onClick={() => router.push("/wishlist")}>
           <span>
             <AiOutlineHeart />{" "}
           </span>
