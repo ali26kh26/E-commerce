@@ -1,32 +1,26 @@
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import SideModal from "../../UI/side-modal/side-modal";
-import { useState, useEffect } from "react";
 import { show as showDispatch } from "../../features/cart/cartSlice";
 import classes from "./cart-modal.module.scss";
 import SlideButton from "../../UI/slide-button/slide-button";
 import CartProduct from "../ProductCMP/cart-product/cart-product";
 const CartModal = () => {
   const cart = useAppSelector((state) => state.cart);
-  const [show, setshow] = useState(cart.show);
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    setshow(cart.show);
-  }, [cart.show]);
-
-  useEffect(() => {
-    if (show === false) dispatch(showDispatch(show));
-  }, [show]);
-
+  const setshow = (value: boolean) => {
+    dispatch(showDispatch(value));
+  };
   if (cart.total_items === 0) {
     return (
-      <SideModal setShow={setshow} show={show}>
+      <SideModal setShow={setshow} show={cart.show}>
         <p>No product in cart</p>
       </SideModal>
     );
   }
+
   return (
-    <SideModal setShow={setshow} show={show}>
+    <SideModal setShow={setshow} show={cart.show}>
       <div className={classes.modal}>
         <div className={classes.top}>
           <h2>
