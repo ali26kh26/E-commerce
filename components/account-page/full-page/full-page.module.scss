@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  max-width: 800px;
+  .more {
+    margin-top: 1.5rem;
+    > h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .policy {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+      font-weight: bold;
+      p:nth-child(1),
+      span {
+        color: #ee6c4d;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 2rem auto;
+    flex-direction: row;
+    align-items: center;
+    .more {
+      margin-left: 2rem;
+      width: 45%;
+    }
+    .form {
+      width: 55%;
+    }
+  }
+}
