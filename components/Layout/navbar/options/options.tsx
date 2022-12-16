@@ -27,7 +27,7 @@ const Options = () => {
         </span>
         <p> Search</p>
       </li>
-      <li>
+      <li onClick={() => router.push("/account/login")}>
         <span>
           <AiOutlineUser />
         </span>
