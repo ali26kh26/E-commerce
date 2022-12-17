@@ -7,7 +7,6 @@ import CartProduct from "../ProductCMP/cart-product/cart-product";
 const CartModal = () => {
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
-
   const setshow = (value: boolean) => {
     dispatch(showDispatch(value));
   };
@@ -45,7 +44,7 @@ const CartModal = () => {
           </div>
           <hr />
           <div className={classes.buttons}>
-            <SlideButton text="View Cart" href="#" />
+            <SlideButton text="View Cart" href="/cart" />
             <SlideButton text="Checkout" href="#" />
           </div>
         </div>

@@ -3,7 +3,7 @@ import WishlistProduct from "./wishlist-product/wishlist-product";
 import classes from "./wishlist.module.scss";
 import Link from "next/link";
 import { clear_wishlist } from "../../features/wishlist/wishlistSlice";
-import EmptyWishList from "./empty-wishlist/empty-wishlist";
+import EmptyList from "./empty-list/empty-list";
 const Whishlist = () => {
   const wishlist = useAppSelector((state) => state.wishlist);
   const dispatch = useAppDispatch();
@@ -11,7 +11,7 @@ const Whishlist = () => {
     dispatch(clear_wishlist());
   };
   if (wishlist.total_items === 0) {
-    return <EmptyWishList />;
+    return <EmptyList />;
   }
   return (
     <div className={classes.container}>
