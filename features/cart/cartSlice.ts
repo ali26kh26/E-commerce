@@ -63,13 +63,17 @@ export const cartSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
+    clear_cart: (state) => {
+      return initialState;
+    },
     show: (state, action: PayloadAction<boolean>) => {
       state.show = action.payload;
     },
   },
 });
 
-export const { increment, decrement, delete_one, show } = cartSlice.actions;
+export const { increment, decrement, delete_one, clear_cart, show } =
+  cartSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 // export const selectCount = (state: RootState) => state.cart.total;

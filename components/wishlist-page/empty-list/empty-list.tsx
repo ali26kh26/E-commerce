@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import classes from "./empty-wishlist.module.scss";
+import classes from "./empty-list.module.scss";
 
-const EmptyWishList = () => {
+const EmptyList = ({ cart }: { cart?: boolean }) => {
   const router = useRouter();
   const pushHandler = () => {
     router.push("/collections");
@@ -10,7 +10,7 @@ const EmptyWishList = () => {
     <div className={classes.container}>
       <h2>
         <span>Your</span>
-        <span>wishlist</span>
+        <span>{cart ? "cart" : "wishlist"}</span>
         <span>is currently</span>
         <span>Empty</span>
       </h2>
@@ -21,4 +21,4 @@ const EmptyWishList = () => {
   );
 };
 
-export default EmptyWishList;
+export default EmptyList;
