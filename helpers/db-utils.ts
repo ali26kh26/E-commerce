@@ -4,7 +4,7 @@ export async function connectToDataBase() {
   let client: MongoClient;
   try {
     client = await MongoClient.connect(
-      "mongodb+srv://ali26kh26:AZBY1928@grocery-store-db.4pkamqy.mongodb.net/products?retryWrites=true&w=majority"
+      `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_cluster}.4pkamqy.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
     );
     return client;
   } catch (error) {
