@@ -1,5 +1,5 @@
 import product from "../../types/product";
-import { Product } from "../ProductCMP";
+import GridProducts from "../collections-page/main-content/grid-products/grid-products";
 import SearchBox from "./search-box/search-box";
 import classes from "./search.module.scss";
 const Search = ({
@@ -20,10 +20,8 @@ const Search = ({
         <SearchBox />
       </div>
       {products.length > 0 && (
-        <div style={{ marginBottom: "4rem" }}>
-          {products.map((product, index) => (
-            <Product product={product} key={index} />
-          ))}
+        <div className={classes.products_container}>
+          <GridProducts products={products} />
         </div>
       )}
     </div>
