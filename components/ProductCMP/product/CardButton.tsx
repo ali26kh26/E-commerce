@@ -14,7 +14,7 @@ function CardButton(): JSX.Element {
         />
       </p>
 
-      <p style={{ boxShadow: "" }} className="hidden  lg:inline">
+      <p style={{ boxShadow: "none" }} className="hidden  lg:inline">
         ADD TO CART
       </p>
     </div>
