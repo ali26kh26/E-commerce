@@ -5,21 +5,22 @@ import { useRouter } from "next/router";
 const SearchBox = () => {
   const [value, setvalue] = useState("");
   const router = useRouter();
-  const submitHandler = () => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setvalue("");
     router.push({ pathname: "/search", query: { q: value } });
   };
   return (
-    <div className={classes.container}>
+    <form className={classes.container} onSubmit={submitHandler}>
       <input
         type="text"
         placeholder="search our store"
         onChange={(e) => setvalue(e.target.value)}
       />
-      <div onClick={submitHandler}>
+      <button type="submit">
         <AiOutlineSearch />
-      </div>
-    </div>
+      </button>
+    </form>
   );
 };
 
