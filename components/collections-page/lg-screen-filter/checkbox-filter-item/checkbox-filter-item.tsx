@@ -8,14 +8,18 @@ interface Props {
   title: string;
   options: option[];
 }
+interface initialValue {
+  [key: string]: boolean;
+}
 const CheckBoxFilterItem = ({ title, options }: Props) => {
-  const optionValues = options
-    .map((item) => item.title)
-    .reduce((acc, curr) => ((acc[curr] = false), acc), {});
-  const [values, setValues] = useState(optionValues);
+  const optionValues = options.reduce(
+    (acc, curr) => ({ ...acc, [curr.title]: false }),
+    {}
+  );
+  const [values, setValues] = useState<initialValue>(optionValues);
   const clickHandler = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
-    key: String
+    key: string
   ) => {
     e.preventDefault();
     let clone = values;

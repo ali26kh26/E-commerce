@@ -6,12 +6,13 @@ import classes from "./discover-product.module.scss";
 const DiscoverProduct = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const scrollHandler = (direction: string) => {
-    console.log(direction);
     const scrollValue = direction === "left" ? 200 : -200;
-    if (direction === "left") {
-      contentRef.current.scrollLeft += 200;
-    } else {
-      contentRef.current.scrollLeft -= 200;
+    if (contentRef.current) {
+      if (direction === "left") {
+        contentRef.current.scrollLeft += 200;
+      } else {
+        contentRef.current.scrollLeft -= 200;
+      }
     }
   };
   return (
@@ -20,7 +21,7 @@ const DiscoverProduct = () => {
       <div className={classes.content} ref={contentRef}>
         <ArrowButton direction="left" scrollHandler={scrollHandler} />
         <ArrowButton direction="right" scrollHandler={scrollHandler} />
-        <Product
+        {/* <Product
           title="Purple onion"
           price={20.0}
           image="/assets/productIMG/onion_1024x1024.webp"
@@ -64,7 +65,7 @@ const DiscoverProduct = () => {
           title="Purple onion"
           price={20.0}
           image="/assets/productIMG/onion_1024x1024.webp"
-        />
+        /> */}
       </div>
     </div>
   );
