@@ -1,7 +1,6 @@
 import {
   connectToDataBase,
   getAllDocuments,
-  getFilteredDocuments,
   getSingleDocument,
 } from "./db-utils";
 
