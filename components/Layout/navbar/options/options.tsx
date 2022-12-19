@@ -33,24 +33,24 @@ const Options = () => {
         </span>
         <p> Account</p>
       </li>
-      <NotificationBadge value={wishlist.total_items}>
-        <li onClick={() => router.push("/wishlist")}>
-          <span>
+      <li onClick={() => router.push("/wishlist")}>
+        <span>
+          <NotificationBadge value={wishlist.total_items}>
             <AiOutlineHeart />{" "}
-          </span>
-          <p> Wishlist</p>
-        </li>
-      </NotificationBadge>
+          </NotificationBadge>
+        </span>
+        <p> Wishlist</p>
+      </li>
 
       <AddToCartButton>
-        <NotificationBadge value={cart.total_items}>
-          <li>
-            <span>
+        <li>
+          <span>
+            <NotificationBadge value={cart.total_items}>
               <AiOutlineShopping />
-            </span>
-            <p> My cart</p>
-          </li>
-        </NotificationBadge>
+            </NotificationBadge>
+          </span>
+          <p> My cart</p>
+        </li>
       </AddToCartButton>
     </ul>
   );

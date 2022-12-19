@@ -14,10 +14,11 @@ const SearchBar = () => {
     dispatch(search_show(false));
   };
 
-  const submitHandler = () => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     closeHandler();
-    setvalue("");
     router.push({ pathname: "/search", query: { q: value } });
+    setvalue("");
   };
   return (
     <div
@@ -29,17 +30,17 @@ const SearchBar = () => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className={classes.content}>
-          <div className={classes.input}>
+          <form className={classes.input} onSubmit={submitHandler}>
             <input
               type="text"
               placeholder="search our store"
               value={value}
               onChange={(e) => setvalue(e.target.value)}
             />
-            <div onClick={submitHandler} className={classes.search_icon}>
+            <button type="submit" className={classes.search_icon}>
               <AiOutlineSearch />
-            </div>
-          </div>
+            </button>
+          </form>
 
           <div className={classes.close_icon} onClick={closeHandler}>
             <AiOutlineClose />

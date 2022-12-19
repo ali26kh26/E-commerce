@@ -11,9 +11,9 @@ const CartPage = () => {
   const clearHandler = () => {
     dispatch(clear_cart());
   };
-  // if (cart.total_items === 0) {
-  //   return <EmptyList cart />;
-  // }
+  if (cart.total_items === 0) {
+    return <EmptyList cart />;
+  }
   return (
     <div className={classes.container}>
       <div className={classes.cart}>

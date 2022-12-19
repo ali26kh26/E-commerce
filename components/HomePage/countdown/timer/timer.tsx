@@ -9,7 +9,7 @@ const Timer = () => {
   const [days, setDays] = useState(0);
 
   useEffect(() => {
-    const finalDay = new Date("2022-11-26T24:00:00");
+    const finalDay = new Date("2023-02-26T24:00:00");
     const finalDAaySeconds = Math.floor(finalDay.getTime() / 1000);
     const currentDate = new Date();
     const currentDateSeconds = Math.floor(currentDate.getTime() / 1000);
