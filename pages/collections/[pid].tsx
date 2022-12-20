@@ -1,3 +1,4 @@
+import Head from "next/head";
 import ProductPage from "../../components/product-page/product-page";
 import { getSingleProduct } from "../../helpers/products-util";
 import product from "../../types/product";
@@ -7,7 +8,18 @@ interface Props {
 }
 
 const SingleProductPage = ({ product }: Props) => {
-  return <ProductPage product={product} />;
+  return (
+    <>
+      <Head>
+        <title>{product.name} - grocery-store</title>
+        <meta
+          name="description"
+          content={`more details about ${product.name}`}
+        />
+      </Head>
+      <ProductPage product={product} />;
+    </>
+  );
 };
 
 export async function getServerSideProps(context: { params: { pid: string } }) {
