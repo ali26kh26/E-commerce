@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="an online shop for fresh groceries "
         />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Provider store={store}>
         <Layout>
