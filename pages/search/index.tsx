@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Search from "../../components/search-page/search";
 import {
   getAllProducts,
@@ -12,7 +13,18 @@ const SearchPage = ({
   products: Array<product>;
   searchValue: string;
 }) => {
-  return <Search searchValue={searchValue} products={products} />;
+  return (
+    <>
+      <Head>
+        <title>
+          Search: {products.length} results found for "{searchValue}" -
+          grocery-store
+        </title>
+        <meta name="description" content="search in variety of products" />
+      </Head>
+      <Search searchValue={searchValue} products={products} />;
+    </>
+  );
 };
 
 export default SearchPage;

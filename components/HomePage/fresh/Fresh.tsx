@@ -26,7 +26,7 @@ const Fresh = () => {
             randomised words which don't look even slightly believable.
           </p>
           <div className={classes.button}>
-            <SlideButton href="/" text="SHOP NOW" />
+            <SlideButton href="/collections" text="SHOP NOW" />
           </div>
         </div>
       </div>

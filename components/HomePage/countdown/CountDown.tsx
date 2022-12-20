@@ -17,7 +17,7 @@ const CountDown = () => {
         <p>We offer a hot deal offer every festival </p>
         <h1>Deal of the day!</h1>
         <Timer />
-        <SlideButton text="shop collection" href="/" />
+        <SlideButton text="shop collection" href="/collections" />
       </div>
     </div>
   );

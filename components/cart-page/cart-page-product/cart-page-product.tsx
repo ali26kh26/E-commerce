@@ -11,6 +11,7 @@ import {
 } from "../../../features/cart/cartSlice";
 import cart_product from "../../../types/cart_product";
 import { useEffect } from "react";
+import GoToProduct from "../../ProductCMP/product/go-to-product/go-to-product";
 const CartPageProduct = ({ product }: { product: cart_product }) => {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -32,7 +33,14 @@ const CartPageProduct = ({ product }: { product: cart_product }) => {
     <>
       <div className={classes.container}>
         <div className={classes.head}>
-          <Image src={product.image} layout="fixed" width={150} height={150} />
+          <GoToProduct slug={product.slug}>
+            <Image
+              src={product.image}
+              layout="fixed"
+              width={150}
+              height={150}
+            />
+          </GoToProduct>
           <div className={classes.title}>
             <h2>{product.name}</h2>
             <div className={classes.title_price}>

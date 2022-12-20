@@ -5,13 +5,21 @@ import Price from "../../ProductCMP/product/Price";
 import classes from "./wishlist-product.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import AddToWishListButton from "../../ProductCMP/product/add-to-wishlist-button/add-to-wishlist-button";
+import GoToProduct from "../../ProductCMP/product/go-to-product/go-to-product";
 
 const WishlistProduct = ({ product }: { product: product }) => {
   return (
     <>
       <div className={classes.container}>
         <div className={classes.head}>
-          <Image src={product.image} layout="fixed" width={150} height={150} />
+          <GoToProduct slug={product.slug}>
+            <Image
+              src={product.image}
+              layout="fixed"
+              width={150}
+              height={150}
+            />
+          </GoToProduct>
           <h2>{product.name}</h2>
         </div>
         <div className={classes.body}>

@@ -17,7 +17,7 @@ const Banner = () => {
           <p>GET UP TO 30% OFF</p>
           <h1>BRUSSLES</h1>
           <h3>Foods</h3>
-          <SlideButton href="/" text="Buy Now" />
+          <SlideButton href="/collections" text="Buy Now" />
         </div>
       </div>
       <div className={classes.second}>

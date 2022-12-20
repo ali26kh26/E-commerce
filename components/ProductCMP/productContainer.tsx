@@ -16,6 +16,7 @@ import AddToCartButton from "./product/add-to-cart-button/add-to-cart-button";
 import AddToWishListButton from "./product/add-to-wishlist-button/add-to-wishlist-button";
 import { useAppSelector } from "../../hooks/hooks";
 import { AiOutlineClose } from "react-icons/ai";
+import GoToProduct from "./product/go-to-product/go-to-product";
 
 function productContainer({ product }: { product: product }): JSX.Element {
   const customButton = useRef<HTMLDivElement>(null);
@@ -58,9 +59,6 @@ function productContainer({ product }: { product: product }): JSX.Element {
       onMouseOver={addClass}
       onMouseLeave={removeClass}
       className=" relative h-fit flex flex-col items-center bg-white"
-      // onClick={() => {
-      //   router.push(`/collections/${product.name}`);
-      // }}
     >
       <div className=" bg-white relative overflow-hidden">
         {/* big screen */}
@@ -88,7 +86,9 @@ function productContainer({ product }: { product: product }): JSX.Element {
         </div>
 
         {/* Image */}
-        <Img src={product.image} />
+        <GoToProduct slug={product.slug}>
+          <Img src={product.image} />
+        </GoToProduct>
 
         {/* big screen */}
         <div ref={cardButton} className={style.cardButtom}>

@@ -11,7 +11,11 @@ const ProductDetailContainer = ({
 }) => {
   return (
     <div className={classes.product}>
-      <ProductImage path={product.image} />
+      <ProductImage
+        quickview={quickview}
+        slug={product.slug}
+        path={product.image}
+      />
       <Productetail product={product} quickview={quickview} />
     </div>
   );
