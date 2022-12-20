@@ -8,11 +8,13 @@
     cursor: pointer;
     transition: all 0.3s;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    span {
-      margin-left: 4px;
-      font-size: 0.7rem;
+    > a {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 4px;
+        font-size: 0.7rem;
+      }
     }
   }
   &:hover,
