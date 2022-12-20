@@ -9,6 +9,7 @@ import cart_product from "../../../types/cart_product";
 import ProductQuantity from "../../product-page/product-detail/product-quantity/product-quantity";
 import classes from "./cart-product.module.scss";
 import { FiTrash } from "react-icons/fi";
+import GoToProduct from "../product/go-to-product/go-to-product";
 const CartProduct = ({ product }: { product: cart_product }) => {
   const dispatch = useAppDispatch();
   const changeQuantityHandler = (value: number) => {
@@ -24,12 +25,9 @@ const CartProduct = ({ product }: { product: cart_product }) => {
   return (
     <div className={classes.container}>
       <div className={classes.image}>
-        <Image
-          width={150}
-          height={150}
-          layout="responsive"
-          src={product.image}
-        />
+        <GoToProduct slug={product.slug}>
+          <Image width={150} height={150} src={product.image} />
+        </GoToProduct>
       </div>
       <div className={classes.content}>
         <h2>{product.name}</h2>
