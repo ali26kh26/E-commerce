@@ -1,9 +1,10 @@
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
+import {
+  quickview_product,
+  quickview_show,
+} from "../../../../features/quickview/quckviewSlice";
+import { useAppDispatch } from "../../../../hooks/hooks";
 import product from "../../../../types/product";
-import CenterModal from "../../../../UI/center-modal/center-modal";
-import ProductDetailContainer from "../../../product-page/product-detail-container/product-detail-container";
-import classes from "./quick-view-button.module.scss";
-
 const QuickViewButton = ({
   product,
   children,
@@ -11,19 +12,12 @@ const QuickViewButton = ({
   product: product;
   children: ReactNode;
 }) => {
-  const [showBox, setshowBox] = useState(false);
-  return (
-    <>
-      <div onClick={() => setshowBox((prev) => !prev)}>{children}</div>
-      <CenterModal show={showBox} setShow={setshowBox}>
-        <div className={classes.modal}>
-          <h1>Quickview</h1>
-          <hr />
-          <ProductDetailContainer quickview product={product} />
-        </div>
-      </CenterModal>
-    </>
-  );
+  const dispatch = useAppDispatch();
+  const clickHandler = () => {
+    dispatch(quickview_show(true));
+    dispatch(quickview_product(product));
+  };
+  return <div onClick={clickHandler}>{children}</div>;
 };
 
 export default QuickViewButton;

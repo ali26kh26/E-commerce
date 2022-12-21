@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 interface Props {
   show: boolean;
-  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+  setShow:
+    | React.Dispatch<React.SetStateAction<boolean>>
+    | ((value: boolean) => void);
   children: React.ReactNode;
 }
 const CenterModal = ({ show, setShow, children }: Props) => {
