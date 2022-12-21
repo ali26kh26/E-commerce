@@ -12,6 +12,7 @@ import SelectSize from "./select-size/select-size";
 import AddToCartButton from "../../ProductCMP/product/add-to-cart-button/add-to-cart-button";
 import WishlistIcon from "../../ProductCMP/full-width-product/product-actions/wishlist-icon/wishlist-icon";
 import AddToWishListButton from "../../ProductCMP/product/add-to-wishlist-button/add-to-wishlist-button";
+import Price from "../../ProductCMP/product/Price";
 const Productetail = ({
   product,
   quickview,
@@ -27,9 +28,6 @@ const Productetail = ({
       setQuantity((prev) => prev - 1);
     }
   };
-  function calcDiscountPrice(price: number, discount: number) {
-    return price - price * (discount / 100);
-  }
   const summarize = (text: string) => {
     if (text.length > 35) {
       return text.slice(0, 58) + " ....";
@@ -59,14 +57,7 @@ const Productetail = ({
         )}
       </div>
       <div className={classes.detail_price}>
-        {product.discount && (
-          <span>${calcDiscountPrice(product.price, product.discount)}</span>
-        )}
-        <span
-          style={product.discount ? { textDecoration: "line-through" } : {}}
-        >
-          ${product.price}
-        </span>
+        <Price value={product.price} discount={product.discount} />
         {product.discount && <DiscountBadge discount={product.discount} />}
       </div>
       <p className={classes.detail_description}>
