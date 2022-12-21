@@ -2,18 +2,17 @@ import classes from "./seach-bar.module.scss";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { search_show } from "../../features/search/searchSlice";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 const SearchBar = () => {
   const show = useAppSelector((state) => state.search.show);
   const dispatch = useAppDispatch();
   const [value, setvalue] = useState("");
   const router = useRouter();
-
+  const inputRef = useRef<HTMLInputElement>(null);
   const closeHandler = () => {
     dispatch(search_show(false));
   };
-
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     closeHandler();
@@ -26,6 +25,7 @@ const SearchBar = () => {
       onClick={closeHandler}
     >
       <div
+        onTransitionEnd={() => inputRef.current?.focus()}
         className={`${classes.inner} ${show ? classes.fix : ""}`}
         onClick={(e) => e.stopPropagation()}
       >
@@ -35,6 +35,7 @@ const SearchBar = () => {
               type="text"
               placeholder="search our store"
               value={value}
+              ref={inputRef}
               onChange={(e) => setvalue(e.target.value)}
             />
             <button type="submit" className={classes.search_icon}>
