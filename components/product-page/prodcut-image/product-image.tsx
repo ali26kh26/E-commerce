@@ -22,7 +22,7 @@ const ProductImage = ({
         />
       ) : (
         <GoToProduct slug={slug}>
-          <Image src={path} quality={100} width={400} height={400} />
+          <Image src={path} quality={100} width={250} height={250} />
         </GoToProduct>
       )}
     </div>
