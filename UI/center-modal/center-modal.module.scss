@@ -40,15 +40,17 @@
 @media (max-width: 768px) {
   .outer {
     .inner {
-      width: 50vw;
+      width: 90vw;
+      padding: 0 0.5rem;
+      min-width: unset;
     }
   }
 }
 @media (max-width: 500px) {
   .outer {
     .inner {
-      width: 60vw;
-      padding: 8% 1rem;
+      width: 100vw;
+      padding: 0 1rem;
     }
   }
 }

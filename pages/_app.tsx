@@ -7,6 +7,7 @@ import { store } from "../store/store";
 import CartModal from "../components/cart-modal/cart-modal";
 import SearchBar from "../components/search-bar/search-bar";
 import Head from "next/head";
+import QuickviewModal from "../components/quick-view-modal/quick-view-modal";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Layout>
           <CartModal />
+          <QuickviewModal />
           <SearchBar />
           <Component {...pageProps} />
           <ScrollTop />
