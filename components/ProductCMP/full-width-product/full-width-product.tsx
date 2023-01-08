@@ -1,6 +1,7 @@
 import Image from "next/image";
 import product from "../../../types/product";
 import { Star } from "../../icons";
+import DiscountBadge from "../product/discount-badge/discount-badge";
 import GoToProduct from "../product/go-to-product/go-to-product";
 import Price from "../product/Price";
 import Score from "../product/Score";
@@ -33,6 +34,9 @@ const FullWidthProduct = ({ product }: { product: product }) => {
         </p>
         <ProductActions product={product} />
       </div>
+      {product.discount && (
+        <DiscountBadge relative discount={product.discount} />
+      )}
     </div>
   );
 };
