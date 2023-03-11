@@ -14,6 +14,7 @@ const LgScreenFilter = () => {
       <AvailabilityFilter />
       <FilterItems title="Price">price</FilterItems>
       <Image
+        alt="banner"
         width={100}
         height={110}
         src="/assets/banner/side-banner.webp"

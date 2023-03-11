@@ -14,7 +14,13 @@ const FullWidthProduct = ({ product }: { product: product }) => {
     <div className={classes.container}>
       <div className={classes.image}>
         <GoToProduct slug={product.slug}>
-          <Image src={product.image} width={480} height={370} quality={100} />
+          <Image
+            alt={product.name}
+            src={product.image}
+            width={480}
+            height={370}
+            quality={100}
+          />
         </GoToProduct>
       </div>
       <div className={classes.content}>

@@ -11,9 +11,7 @@ const Crumbs = ({ href, title, last = false }: Props) => {
   }
   return (
     <Link href={href}>
-      <a>
-        <p className={classes.link}> {title}</p>
-      </a>
+      <p className={classes.link}> {title}</p>
     </Link>
   );
 };

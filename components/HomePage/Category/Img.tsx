@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import { useState } from "react";
 
 function Img(): JSX.Element {
@@ -7,7 +7,7 @@ function Img(): JSX.Element {
       className=" transition"
       priority
       src={"/assets/category-banner.png"}
-      alt={""}
+      alt="banner"
       width={500}
       height={700}
     />

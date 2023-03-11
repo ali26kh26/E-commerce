@@ -8,7 +8,9 @@ import CartModal from "../components/cart-modal/cart-modal";
 import SearchBar from "../components/search-bar/search-bar";
 import Head from "next/head";
 import QuickviewModal from "../components/quick-view-modal/quick-view-modal";
+import { Poppins } from "next/font/google";
 
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -22,13 +24,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <Provider store={store}>
-        <Layout>
-          <CartModal />
-          <QuickviewModal />
-          <SearchBar />
-          <Component {...pageProps} />
-          <ScrollTop />
-        </Layout>
+        <main className={poppins.className}>
+          <Layout>
+            <CartModal />
+            <QuickviewModal />
+            <SearchBar />
+            <Component {...pageProps} />
+            <ScrollTop />
+          </Layout>
+        </main>
       </Provider>
     </>
   );

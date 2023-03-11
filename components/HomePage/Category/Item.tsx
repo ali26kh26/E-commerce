@@ -10,6 +10,7 @@ function Item({ src, title, items }: props): JSX.Element {
     <div className="space-y-1">
       <div className="cursor-pointer transition ease-in-out hover:scale-125 drop-shadow-lg">
         <Image
+          alt={title}
           className=""
           src={src}
           width={100}

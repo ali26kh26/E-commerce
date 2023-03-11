@@ -6,6 +6,7 @@ const MainCintentHeader = ({ value }: { value: number }) => {
     <div className={classes.container}>
       <h1>Fresh Fruits ({value})</h1>
       <Image
+        alt="banner"
         layout="responsive"
         src="/assets/banner/collection-banner.webp"
         width={800}

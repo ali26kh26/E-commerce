@@ -8,6 +8,7 @@ const Fresh = () => {
       <div className={classes.inner}>
         <div className={classes.image}>
           <Image
+            alt="vegist"
             src={"/assets/vegist-image.webp"}
             layout="responsive"
             width={700}
