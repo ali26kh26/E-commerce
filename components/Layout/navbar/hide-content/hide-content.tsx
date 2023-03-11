@@ -12,12 +12,10 @@ const HideContent = ({ title, children }: Props) => {
     <div className={classes.container}>
       <h2 className={classes.title}>
         <Link href="/collections">
-          <a>
-            {title}
-            <span>
-              <AiOutlineDown />{" "}
-            </span>
-          </a>
+          {title}
+          <span>
+            <AiOutlineDown />{" "}
+          </span>
         </Link>
       </h2>
       <div className={classes.content}>{children}</div>
