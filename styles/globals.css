@@ -20,13 +20,8 @@ li {
 
 * {
   box-sizing: border-box;
-  font-family: Poppins;
 }
 
-@font-face {
-  font-family: Poppins;
-  src: url("../public/assets/fonts/Poppins-Light.ttf");
-}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
