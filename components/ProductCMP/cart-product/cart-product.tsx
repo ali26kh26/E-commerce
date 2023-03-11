@@ -26,7 +26,12 @@ const CartProduct = ({ product }: { product: cart_product }) => {
     <div className={classes.container}>
       <div className={classes.image}>
         <GoToProduct slug={product.slug}>
-          <Image width={150} height={150} src={product.image} />
+          <Image
+            alt={product.name}
+            width={150}
+            height={150}
+            src={product.image}
+          />
         </GoToProduct>
       </div>
       <div className={classes.content}>

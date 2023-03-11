@@ -14,6 +14,7 @@ const ProductImage = ({
     <div style={{ width: "100%" }}>
       {!quickview ? (
         <Image
+          alt={slug}
           src={path}
           layout="responsive"
           quality={100}
@@ -22,7 +23,7 @@ const ProductImage = ({
         />
       ) : (
         <GoToProduct slug={slug}>
-          <Image src={path} quality={100} width={250} height={250} />
+          <Image alt={slug} src={path} quality={100} width={250} height={250} />
         </GoToProduct>
       )}
     </div>

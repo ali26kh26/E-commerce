@@ -72,6 +72,7 @@ const Links = () => {
             <li className={classes.content_item}>
               <div className={classes.collection}>
                 <Image
+                  alt="watermelon"
                   src={"/assets/collections/watermelon.jpg"}
                   width={235}
                   height={150}
@@ -82,6 +83,7 @@ const Links = () => {
             <li className={classes.content_item}>
               <div className={classes.collection}>
                 <Image
+                  alt="kiwi"
                   src={"/assets/collections/kiwi.jpg"}
                   width={250}
                   height={150}
@@ -92,6 +94,7 @@ const Links = () => {
             <li className={classes.content_item}>
               <div className={classes.collection}>
                 <Image
+                  alt="juice"
                   src={"/assets/collections/juice.jpg"}
                   width={250}
                   height={150}

@@ -14,6 +14,7 @@ const WishlistProduct = ({ product }: { product: product }) => {
         <div className={classes.head}>
           <GoToProduct slug={product.slug}>
             <Image
+              alt={product.name}
               src={product.image}
               layout="fixed"
               width={150}

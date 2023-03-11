@@ -8,6 +8,7 @@ const Banner = () => {
     <div className={classes.container}>
       <div className={classes.first}>
         <Image
+          alt="banner"
           src={"/assets/banner35.webp"}
           layout="responsive"
           width={500}
@@ -22,6 +23,7 @@ const Banner = () => {
       </div>
       <div className={classes.second}>
         <Image
+          alt="banner"
           src={"/assets/banner/video.webp"}
           layout="responsive"
           width={500}

@@ -7,6 +7,7 @@ const CountDown = () => {
   return (
     <div className={classes.container}>
       <Image
+        alt="banner"
         src={"/assets/background/background1.webp"}
         layout="fill"
         className={classes.image}
