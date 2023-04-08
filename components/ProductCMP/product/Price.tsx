@@ -1,3 +1,5 @@
+import { calcDiscountPrice } from "../../../helpers/product-client";
+
 function Price({
   value,
   discount,
@@ -5,9 +7,6 @@ function Price({
   value: number;
   discount?: number;
 }): JSX.Element {
-  function calcDiscountPrice(price: number, discount: number) {
-    return (price - price * (discount / 100)).toFixed(2);
-  }
   return (
     <div className="flex justify-between font-bold pt-1 ">
       <p className="m-auto">

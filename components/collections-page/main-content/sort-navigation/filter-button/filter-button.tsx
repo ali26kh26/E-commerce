@@ -4,7 +4,7 @@ import { useState } from "react";
 import SideModal from "../../../../../UI/side-modal/side-modal";
 import LgScreenFilter from "../../../lg-screen-filter/lg-screen";
 
-const FilterButton = () => {
+const FilterButton = ({ productsNums }: { productsNums: number }) => {
   const [showModal, setshowModal] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const FilterButton = () => {
         <p>Filter</p>
       </div>
       <SideModal show={showModal} setShow={setshowModal}>
-        <LgScreenFilter />
+        <LgScreenFilter productsNums={productsNums} />
       </SideModal>
     </>
   );

@@ -1,0 +1,11 @@
+.container {
+  padding: 4px 10px;
+  color: white;
+  background-color: black;
+  display: inline-block;
+  margin: 6px;
+  cursor: pointer;
+  span:nth-child(2) {
+    margin-left: 10px;
+  }
+}

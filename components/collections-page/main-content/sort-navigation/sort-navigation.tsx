@@ -7,13 +7,14 @@ import SortSelect from "./sort-select/sort-select";
 interface Props {
   displayHandler: (value: string) => void;
   display: string;
+  productsNums: number;
 }
 
-const SortNavigation = ({ displayHandler, display }: Props) => {
+const SortNavigation = ({ displayHandler, display, productsNums }: Props) => {
   return (
     <nav className={classes.container}>
       <div className={classes.display}>
-        <FilterButton />
+        <FilterButton productsNums={productsNums} />
         <div
           className={`${classes.display_item}  ${
             display === "grid" ? classes.active : ""
