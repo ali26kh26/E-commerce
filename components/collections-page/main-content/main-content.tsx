@@ -16,7 +16,11 @@ const MainContent = ({ products }: { products: Array<product> }) => {
   return (
     <div className={classes.container}>
       <MainCintentHeader value={16} />
-      <SortNavigation displayHandler={displayChangeHandler} display={display} />
+      <SortNavigation
+        displayHandler={displayChangeHandler}
+        display={display}
+        productsNums={products.length}
+      />
       {display === "grid" ? (
         <GridProducts products={products} />
       ) : (
